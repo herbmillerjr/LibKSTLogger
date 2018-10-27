@@ -6,9 +6,14 @@ TEMPLATE = lib
 DEFINES += LIBKSTLOGGER_LIBRARY
 
 SOURCES += \
-    logger.cpp
+    logger.cpp \
+    logmessage.cpp
 
 HEADERS += \
         libkstlogger_global.h \ 
-    logger.h
+    logger.h \
+    logmessage.h \
+    loggertypes.h
 
+INCLUDEPATH += ../LibKSTSettings
+LIBS += -L../LibKSTSettings -lKSTSettings
